@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.2](https://github.com/AnassAzizi/actions-template-sync/compare/v2.4.1...v2.4.2) (2024-11-04)
+
+
+### Bug Fixes
+
+* remove pull from docker hub ([0e21c3a](https://github.com/AnassAzizi/actions-template-sync/commit/0e21c3afaa621922c0a9afe3d8fb7d1cf23e81f4))
+
 ## [2.4.1](https://github.com/AndreasAugustin/actions-template-sync/compare/v2.4.0...v2.4.1) (2024-10-15)
 
 
