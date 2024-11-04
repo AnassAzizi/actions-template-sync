@@ -1,7 +1,9 @@
 ########################################
 # prod image
 #######################################
-FROM alpine:3.20.3 AS prod
+# image for dev build environment
+######################################
+FROM public.ecr.aws/docker/library/alpine:3.18.3 as dev
 
 ARG GH_CLI_VER=2.44.1
 
@@ -54,7 +56,7 @@ ENTRYPOINT ["/bin/zsh"]
 #######################################
 # image for creating the documentation
 ######################################
-FROM node:23.1.0-alpine AS docs
+FROM public.ecr.aws/docker/library/node:20.6.1-alpine as docs
 
 # install packages
 RUN apk add --update --no-cache bash make git zsh curl tmux
