@@ -1,7 +1,7 @@
 #######################################
 # image for dev build environment
 ######################################
-FROM alpine:3.18.3 as dev
+FROM public.ecr.aws/docker/library/alpine:3.18.3 as dev
 
 ARG GH_CLI_VER=2.34.0
 
@@ -30,7 +30,7 @@ WORKDIR /app
 #######################################
 # image for creating the documentation
 ######################################
-FROM node:20.6.1-alpine as docs
+FROM public.ecr.aws/docker/library/node:20.6.1-alpine as docs
 
 # install packages
 RUN apk add --update --no-cache bash make git zsh curl tmux
