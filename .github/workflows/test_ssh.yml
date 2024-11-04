@@ -11,11 +11,13 @@ on:
 jobs:
   test-implementation-job:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Test action step ssh
         if: github.repository_owner == 'AndreasAugustin'
         uses: ./ # Uses an action in the root directory

@@ -1,13 +1,11 @@
 version: 2
 updates:
-- package-ecosystem: docker
+- package-ecosystem: "github-actions"
   directory: "/"
   schedule:
-    interval: weekly
-    time: "04:00"
-  open-pull-requests-limit: 10
+    interval: "weekly"
 - package-ecosystem: docker
-  directory: "/src"
+  directory: "/"
   schedule:
     interval: weekly
     time: "04:00"
